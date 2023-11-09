@@ -50,7 +50,7 @@ class ForgotPass extends StatelessWidget {
               height: 70,
             ),
             Text(
-              "Verify Code",
+              "Forgot Password",
               style: GoogleFonts.yaldevi(
                   fontSize: 44,
                   fontWeight: FontWeight.w400,
@@ -104,13 +104,15 @@ class ForgotPass extends StatelessWidget {
               controller: _email,
               text: 'Enter Email Address',
               isPass: false,
-              id: 1,
+              isNumber: false,
             ),
             SizedBox(
               height: 40,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                FocusScope.of(context).requestFocus(FocusNode());
+              },
               child: Container(
                 height: 56,
                 width: double.infinity,

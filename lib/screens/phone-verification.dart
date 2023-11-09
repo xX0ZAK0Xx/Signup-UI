@@ -154,7 +154,7 @@ class _PhoneVerificationState extends State<PhoneVerification> {
                   controller: _phoneNumber,
                   text: "",
                   isPass: false,
-                  id: 1,
+                  isNumber: true, 
                 ),
               ]),
             ),

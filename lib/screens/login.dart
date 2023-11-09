@@ -95,14 +95,14 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _email,
                   text: "Enter Email Address",
                   isPass: false,
-                  id: 2,
+                  isNumber: false, 
                 ),
                 SizedBox(height: 15),
                 InputBox(
                   controller: _password,
                   text: "Password",
                   isPass: true,
-                  id: 3,
+                  isNumber: false, 
                 ),
                 SizedBox(height: 15),
                 //----------------Forget------------------------
@@ -132,7 +132,9 @@ class _LoginPageState extends State<LoginPage> {
             ),
             //----------------Register--------------------------------
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                FocusScope.of(context).requestFocus(FocusNode());
+              },
               child: Container(
                 height: 56,
                 width: double.infinity,
